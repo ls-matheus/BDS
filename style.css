@@ -1774,7 +1774,6 @@ body[data-route="bds"] .page-bds {
         margin-top: 12px;
         transform: none;
         padding-top: 8px;
-        border-top: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     body[data-view="bds"] .page-bds {
@@ -1908,4 +1907,90 @@ body[data-route="bds"] .page-bds {
     }
 }
 
-a
+/* Altura pequena - landscape mobile */
+@media (max-height: 600px) {
+    body[data-view="dev"] .page-dev-showcase,
+    body[data-view="style"] .page-dev-showcase {
+        padding: 8px 12px 0;
+        gap: 8px;
+    }
+
+    body[data-view="dev"] .project-card,
+    body[data-view="style"] .project-card {
+        border-radius: 14px;
+    }
+
+    body[data-view="dev"] .project-card-image,
+    body[data-view="style"] .project-card-image {
+        max-height: clamp(100px, 20vh, 150px);
+        min-height: 80px;
+    }
+
+    body[data-view="dev"] .project-meta,
+    body[data-view="style"] .project-meta {
+        left: 8px;
+        bottom: 8px;
+        font-size: 0.85rem;
+    }
+
+    body[data-view="dev"] .project-meta h2,
+    body[data-view="style"] .project-meta h2 {
+        font-size: 0.85rem;
+    }
+
+    body[data-view="dev"] .project-meta p,
+    body[data-view="style"] .project-meta p {
+        font-size: 0.7rem;
+    }
+
+    body[data-view="dev"] .card-action,
+    body[data-view="style"] .card-action {
+        width: 32px;
+        height: 32px;
+    }
+
+    body[data-view="dev"] .mini-carousel,
+    body[data-view="style"] .mini-carousel {
+        min-height: clamp(200px, 30vh, 280px);
+        padding: 6px;
+    }
+
+    body[data-view="dev"] .mini-carousel-pages,
+    body[data-view="style"] .mini-carousel-pages {
+        height: clamp(160px, 28vh, 240px);
+    }
+
+    body[data-view="dev"] .mini-carousel-page,
+    body[data-view="style"] .mini-carousel-page {
+        column-gap: 6px;
+        row-gap: 6px;
+    }
+
+    body[data-view="dev"] .mini-card,
+    body[data-view="style"] .mini-card {
+        border-radius: 10px;
+        padding: 6px;
+    }
+
+    body[data-view="dev"] .mini-card-meta h3,
+    body[data-view="style"] .mini-card-meta h3 {
+        font-size: 0.75rem;
+    }
+
+    body[data-view="dev"] .mini-card-meta p,
+    body[data-view="style"] .mini-card-meta p {
+        font-size: 0.65rem;
+    }
+
+    body[data-view="dev"] .mini-carousel-controls,
+    body[data-view="style"] .mini-carousel-controls {
+        margin-top: 6px;
+        gap: 6px;
+    }
+
+    body[data-view="dev"] .carousel-control-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+}
