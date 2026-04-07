@@ -1,0 +1,106 @@
+<link rel="stylesheet" href="assets/codes/css/page.css">
+
+<style>
+
+  .conteudo {
+    color: white;
+    width: 30%;
+    position: absolute;
+    left:5%;
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icons-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    justify-items: center;
+  }
+
+  .mini {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    width: 80px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .mini:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(76, 76, 76, 0.3);
+  }
+
+  .con {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .mini span {
+    font-size: 0.85em;
+    color: #fff;
+  }
+
+  /* Responsivo */
+  @media (max-width: 900px) {
+    .icons-box {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .icons-box {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+<h1 class="pp">Eu uso...</h1>
+<div class="conteudo">
+
+  <div class="icons-box">
+    <div class="mini">
+      <img src="assets/icons/icon/html.png" class="con">
+      <span>HTML</span>
+    </div>
+    <div class="mini">
+      <img src="assets/icons/icon/css-3.png" class="con">
+      <span>CSS</span>
+    </div>
+    <div class="mini">
+      <img src="assets/icons/icon/js.png" class="con">
+      <span>JavaScript</span>
+    </div>
+    <div class="mini">
+      <img src="assets\icons\icon\flutter.webp" class="con">
+      <span>Flutter</span>
+    </div>
+    <div class="mini">
+      <img src="assets/icons/icon/github.png" class="con">
+      <span>GitHub</span>
+    </div>
+    <div class="mini">
+      <img src="assets\icons\icon\dart.webp" class="con">
+      <span>Dart</span>
+    </div>
+    <div class="mini">
+      <img src="assets\icons\icon\office.png" class="con">
+      <span>Office</span>
+    </div>
+    <div class="mini">
+      <img src="assets\icons\icon\after-effects.png" class="con">
+      <span>Effects</span>
+    </div>
+    <div class="mini">
+      <img src="assets/icons/icon/figma.png" class="con">
+      <span>Figma</span>
+    </div>
+  </div>
+</div>

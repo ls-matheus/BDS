@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Animais afetados pelo lixo no mar</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      max-width: 900px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px 1px; /* menos espaço entre colunas */
+      justify-items: center;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .card {
+      background: rgba(223, 242, 248, 0.8);
+      border-radius: 16px;
+      width: 240px;
+      padding: 20px;
+      box-shadow: 0 8px 16px rgb(0 0 0 / 0.15);
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 3px solid #FFF;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 4px 10px rgb(0 0 0 / 0.3);
+      border-color: #FFF;
+    }
+    .card h3 {
+      margin: 12px 0 8px;
+      font-weight: 700;
+      color: #004a80;
+      text-shadow: 1px 1px 3px rgba(255,255,255,0.8);
+    }
+    .card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid #FFF;
+      margin: 0 auto;
+      display: block;
+      background: white;
+    }
+
+    /* Popup */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+      padding: 20px;
+    }
+    .overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .popup-card {
+      background: rgba(223, 242, 248, 0.8);
+      border-radius: 20px;
+      width: 480px;
+      max-width: 90vw;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 30px 25px 25px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      position: relative;
+      text-align: center;
+      animation: popupFadeIn 0.3s ease forwards;
+      border: 5px solid #FFF;
+    }
+    @keyframes popupFadeIn {
+      from {
+        transform: scale(0.85);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    .popup-card h2 {
+      color: #004a80;
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 4px rgba(255,255,255,0.9);
+      font-weight: 700;
+    }
+
+
+  .tit {
+    background: linear-gradient(100deg, #5396c5 0%, #aebaf1 40%, #1936b4 60%, #6580f8 80%, #6384f1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1.5px;
+    font-family: 'Baloo 2', cursive;
+  }
+
+  .tit h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+    top: 0;
+    margin-top: 0;
+  }
+  
+
+
+    .popup-card img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 3px solid #FFF;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background: white;
+    }
+    .popup-card p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #222;
+      margin-bottom: 25px;
+    }
+    .close-btn {
+      cursor: pointer;
+      background: #ffffff;
+      color: rgb(1, 136, 160);
+      border: 3px solid rgba(138, 187, 202, 0.8);
+      border-radius: 12px;
+      padding: 12px 25px;
+      font-size: 18px;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    .close-btn:hover {
+      background: #b5cddf;
+    }
+    /* Botão voltar no topo */
+    .back-btn {
+      padding: 10px 20px;
+      background-color: #004a80;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      height: 30px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+      align-self: flex-start;
+    }
+    .back-btn:hover {
+      background-color: #00335a;
+    }
+  </style>
+</head>
+<body>
+  <button class="back-btn" onclick="history.back()" aria-label="Voltar para a página anterior">
+    Voltar
+  </button>
+
+  <div class="tit">
+    <h1>Cuide deles!</h1>
+</div>
+
+  <main class="container" role="main" aria-label="Lista de animais afetados pelo lixo no mar">
+    <!-- Cards serão criados via JS -->
+  </main>
+
+  <div class="overlay" id="popupOverlay" aria-hidden="true" aria-modal="true" role="dialog">
+    <div class="popup-card" role="document" tabindex="0">
+      <h2 id="popupTitle"></h2>
+      <img id="popupImg" src="" alt="" />
+      <p id="popupText"></p>
+      <button class="close-btn" id="closeBtn" aria-label="Fechar janela">Fechar</button>
+    </div>
+  </div>
+
+  <script>
+    const animals = [
+      {
+        name: "Tartaruga-Marinha",
+        img: "assets/Imgs/Pets/tortuga.avif",
+        text: "As tartarugas-marinhas frequentemente ficam presas em embalagens plásticas, principalmente nos anéis plásticos usados para segurar latinhas, o que pode causar ferimentos graves e até a morte por estrangulamento ou impedimento da locomoção."
+      },
+      {
+        name: "Baleia",
+        img: "assets/Imgs/Pets/baleia.jpg",
+        text: "Baleias ingerem grandes quantidades de microplásticos que se acumulam em seus sistemas digestivos, afetando sua saúde e reprodução. Além disso, colisões com detritos flutuantes podem causar ferimentos."
+      },
+      {
+        name: "Foca",
+        img: "assets/Imgs/Pets/foca.jpg",
+        text: "Focas podem se enroscar em redes de pesca abandonadas e outros resíduos, ficando presas e impossibilitadas de caçar ou fugir de predadores, resultando em ferimentos ou morte."
+      },
+      {
+        name: "Golfinho",
+        img: "assets/Imgs/Pets/golfinho.jpg",
+        text: "Golfinhos também são vítimas da poluição marinha, sofrendo com ingestão de lixo e enroscamento em materiais plásticos que interferem em seus movimentos e comportamento natural."
+      },
+      {
+        name: "Pinguim",
+        img: "assets/Imgs/Pets/pinguim.jpg",
+        text: "Pinguins podem se enroscar em detritos flutuantes e consumir resíduos plásticos, o que compromete sua saúde e reduz sua capacidade de reprodução."
+      },
+      {
+        name: "Morcego-Marinho",
+        img: "assets/Imgs/Pets/peixe-morcego.avif",
+        text: "Esses morcegos que vivem próximos ao mar são afetados pela poluição em praias e manguezais, tendo sua alimentação e abrigo comprometidos por lixo acumulado."
+      },
+      {
+        name: "Atum",
+        img: "assets/Imgs/Pets/atum.jpg",
+        text: "O atum está sujeito à ingestão de microplásticos presentes no oceano, o que pode afetar a cadeia alimentar e a saúde humana, além do impacto direto em sua sobrevivência."
+      },
+      {
+        name: "Polvo",
+        img: "assets/Imgs/Pets/polvo.jpg",
+        text: "Polvos podem ficar presos em redes abandonadas e outros detritos, afetando sua mobilidade e capacidade de caça, o que prejudica sua sobrevivência."
+      },
+      {
+        name: "Garça",
+        img: "assets/Imgs/Pets/garça.jpg",
+        text: "Embora não seja um animal marinho, garças que vivem próximas a ambientes aquáticos são afetadas pela poluição, ingerindo resíduos e ficando presas em detritos."
+      },
+      {
+        name: "Estrela-do-mar",
+        img: "assets/Imgs/Pets/estrela.jpg",
+        text: "Estrelas-do-mar sofrem com a poluição do mar, pois o lixo pode alterar seu habitat e dificultar sua alimentação e reprodução."
+      },
+    ];
+
+    const container = document.querySelector('.container');
+    const overlay = document.getElementById('popupOverlay');
+    const popupTitle = document.getElementById('popupTitle');
+    const popupImg = document.getElementById('popupImg');
+    const popupText = document.getElementById('popupText');
+    const closeBtn = document.getElementById('closeBtn');
+
+    // Criar cards na tela
+    animals.forEach((animal, index) => {
+      const card = document.createElement('div');
+      card.classList.add('card');
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-pressed', 'false');
+      card.setAttribute('aria-label', `Mais informações sobre ${animal.name}`);
+      card.innerHTML = `
+        <img src="${animal.img}" alt="${animal.name}" />
+        <h3>${animal.name}</h3>
+      `;
+      card.addEventListener('click', () => openPopup(index));
+      card.addEventListener('keypress', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openPopup(index);
+        }
+      });
+      container.appendChild(card);
+    });
+
+    function openPopup(index) {
+      const animal = animals[index];
+      popupTitle.textContent = animal.name;
+      popupImg.src = animal.img;
+      popupImg.alt = animal.name;
+      popupText.textContent = animal.text;
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      // Focar no popup para acessibilidade
+      document.querySelector('.popup-card').focus();
+    }
+
+    closeBtn.addEventListener('click', closePopup);
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) closePopup();
+    });
+    function closePopup() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+    }
+  </script>
+</body>
+</html>

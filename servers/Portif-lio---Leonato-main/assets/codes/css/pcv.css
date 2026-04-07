@@ -1,0 +1,43 @@
+.top {
+  display: flex;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+.esquerda {
+  width: 50%;
+  height: 100%;
+  background-color: #D7D7D7;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+}
+
+
+
+.direita {
+  width: 60%;
+  height: 100%;
+  background-color: #000000;
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+  display: flex;
+  justify-content: center;
+}
+
+.foto {
+  position: absolute;
+  bottom: 0;
+  height: 75%;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  width: 40px;
+  z-index: 2;
+}
+
+.titulo {
+  position: absolute;
+  width: 36%;
+  left: 40px;
+}

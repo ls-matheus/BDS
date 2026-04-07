@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca DS</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="layout">
+        <header class="navbar">
+            <nav class="barra" aria-label="Navegacao principal">
+                <div class="organizacao">
+                    <a href="#home" data-route="home" aria-label="Home">
+                        <i class='bx bxs-home-alt-2'></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#bds" data-route="bds" aria-label="BDS">
+                        <i class='bx bxs-book-alt'></i>
+                        <span>BDS</span>
+                    </a>
+                    <a href="#dev" data-route="dev" aria-label="Programacao">
+                        <i class='bx bx-code-alt'></i>
+                        <span>Programacao</span>
+                    </a>
+                    <a href="#style" data-route="style" aria-label="Design">
+                        <i class='bx bxs-palette'></i>
+                        <span>Design</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="page-shell">
+            <div id="app-content" class="loading-state" aria-live="polite">
+                Carregando pagina...
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+</html>

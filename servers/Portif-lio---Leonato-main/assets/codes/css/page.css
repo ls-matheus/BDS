@@ -1,0 +1,98 @@
+.conteudo {
+    display: flex;
+  justify-content: center;
+  flex-direction: column;
+    position: absolute;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.pagina {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+
+.titulo {
+    z-index: 3;
+    position: absolute;
+    top: 100px;
+}
+
+.d {
+    width: 33%;
+    height: 60%;
+    top: 110px;
+}
+
+model-viewer::part(progress-bar),
+model-viewer::part(interaction-prompt),
+model-viewer::part(default-controls) {
+    display: none !important;
+}
+
+model-viewer {
+    --progress-bar-color: transparent;
+}
+
+.caixa {
+  width: 30dvw;
+  height: 30dvh;
+  position: absolute;
+  left: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: Montserrat;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 5.561px;
+}
+
+h3 {
+  font-family: "Raleway", sans-serif;
+font-size: 90%;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+font-weight: 350;
+letter-spacing: 2px;
+margin-top: 30px;
+margin-bottom: 50px;
+}
+
+.icon {
+  width: 10%;
+  margin-right: 20px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  position: absolute;
+  left: -50px;
+}
+
+#h {
+  width: 30%;
+}
+
+.pp {
+  position: absolute;
+  top: 36px;
+  left: 120px;
+  font-size: 20px;
+}
+

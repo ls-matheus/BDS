@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/sem fundo.png">
+    <title>Autocar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/carro3d.glb" as="fetch" type="model/gltf-binary" crossorigin>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <div class="site">
+        <nav class="barra">
+            <div class="organizacao">
+                <button type="button" class="btn logo-trigger" aria-label="Abrir chatbot" aria-haspopup="dialog"
+                    aria-controls="chatbot-popup" aria-expanded="false"><img src="assets/sem fundo.png"
+                        alt="Autocar" class="logo-central" draggable="false"></button>
+
+                <a href="#" data-contrast data-menu-key="home"><i class="bx bxs-home-alt-2"></i>Home</a>
+                <a href="#" data-contrast data-menu-key="cars"><i class="bx bxs-car"></i>Cars</a>
+                <a href="#" data-contrast data-menu-key="buy"><i class="bx bx-cart-add"></i>Buy</a>
+                <a href="#" data-contrast data-menu-key="outros"><i class="bx bx-cloud-light-rain"></i>Outros</a>
+
+                <button type="button" class="btn2 profile-trigger" data-contrast aria-label="Abrir perfil"
+                    aria-haspopup="dialog" aria-controls="perfil-popup" aria-expanded="false"><i
+                        class='bx bxs-user-circle'></i></button>
+            </div>
+            <video class="linhas-navbar" muted playsinline disablepictureinpicture tabindex="-1" preload="auto">
+                <source src="assets/Composição 1.webm" type="video/webm">
+            </video>
+
+            <div class="menu-hover" aria-hidden="true">
+                <a href="#" class="menu-item">Configurações</a>
+                <a href="#" class="menu-item">Segurança</a>
+                <a href="#" class="menu-item">Suporte 24/7</a>
+            </div>
+
+            <div class="nav-popup perfil-popup" id="perfil-popup" role="dialog" aria-modal="false"
+                aria-label="Perfil do usuário">
+                <button type="button" class="popup-close" data-close-popup="perfil-popup" aria-label="Fechar">×</button>
+                <h3>Perfil do Usuário</h3>
+                <p class="perfil-name">Raquel Ferreira</p>
+                <div class="perfil-line"><span>Plano</span><strong>Premium Gold</strong></div>
+                <div class="perfil-line"><span>Veículo</span><strong>Autocar Vision X</strong></div>
+                <div class="perfil-line"><span>Próxima revisão</span><strong>05/04/2026</strong></div>
+                <div class="perfil-line"><span>Status</span><strong class="status-tag">Ativo</strong></div>
+            </div>
+
+            <div class="nav-popup chatbot-popup" id="chatbot-popup" role="dialog" aria-modal="false"
+                aria-label="Chatbot Autocar">
+                <button type="button" class="popup-close" data-close-popup="chatbot-popup" aria-label="Fechar">×</button>
+                <h3>Autocar Bot</h3>
+                <div class="chatbot-log" aria-live="polite">
+                    <p class="chat-msg bot">Olá. Posso te ajudar com rotas, compra ou manutenção.</p>
+                </div>
+                <form class="chatbot-form" autocomplete="off">
+                    <input type="text" class="chatbot-input" placeholder="Digite sua pergunta..." maxlength="180">
+                    <button type="submit" class="chatbot-send">Enviar</button>
+                </form>
+            </div>
+        </nav>
+
+
+        <div class="um">
+            <video autoplay muted loop playsinline disablepictureinpicture
+                controlslist="nodownload noplaybackrate noremoteplayback nofullscreen" tabindex="-1">
+                <source src="assets/fundo.mp4" type="video/mp4">
+            </video>
+            <img src="assets/degrade.png" alt="" class="degrade-img" draggable="false">
+        </div>
+        <div class="separacao">
+            <img src="assets/separar2.png" alt="" class="separador" draggable="false">
+        </div>
+        <div class="dois">
+            <img src="assets/logo com roda.png" alt="">
+                        <div class="direita">
+                <h1>AUTOCAR ™</h1>
+                <h6>A AUTOCAR™ é uma consultoria em soluções digitais automotivas que integra inteligência artificial, experiência do usuário para transformar a forma de dirigir e se relacionar com veículos.</h6>
+            </div>
+        </div>
+        <div class="separacao">
+            <img src="assets/separa3.png" alt="" class="separador" draggable="false">
+        </div>
+                <div class="tres">
+            <img src="assets/mapa4.png" alt="Mapa de cobertura" class="mapa-esquerda" draggable="false">
+            <div class="direita-tres">
+                <h1>Navegação Inteligente</h1>
+                <h6>Diferente de um GPS tradicional, a AUTOCAR entende o seu perfil de conducao e suas preferencias. O sistema ajusta automaticamente as rotas, priorizando caminhos mais rapidos, mais seguros ou mais eficientes de acordo com o seu momento.</h6>
+            </div>
+        </div>
+        <div class="separacao" style="margin-bottom: 200px;">
+            <img src="assets/gold.png" alt="" class="separador" draggable="false">
+        </div>
+        <div class="quatro" style="margin-bottom: 200px;">
+            <model-viewer class="carro-3d" src="assets/carro3d.glb" alt="Carro 3D da Autocar"
+                camera-controls disable-zoom camera-orbit="30deg 80deg auto" interaction-prompt="none" ar-modes="none" loading="eager"
+                reveal="auto"></model-viewer>
+            <img src="assets/fundo carro5.png" alt="" class="fundo-quatro" draggable="false">
+        </div>
+                <div class="separacao" style="margin-bottom: 200px;">
+            <img src="assets/gold.png" alt="" class="separador" draggable="false">
+        </div>
+        <div class="cinco">
+            <img src="assets/pecas.png" alt="" class="fundo-cinco" draggable="false">
+        </div>
+        <div class="seis">
+            <img src="assets/golden2.png" alt="" class="fundo-seis" draggable="false">
+        </div>
+        <div class="seis">
+            <img src="assets/FINALMESMO.png" alt="" class="fundo-seis" draggable="false">
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

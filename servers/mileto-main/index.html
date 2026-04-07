@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Estagiarios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="viewport">
+        <article class="dashboard">
+            <aside class="rail">
+                <div class="logo-dot">EF</div>
+                <nav class="rail-group" aria-label="Menu principal">
+                    <a href="#" class="rail-item active" data-view="painel" data-label="Painel"><i class='bx bx-home-alt'></i></a>
+                    <a href="#" class="rail-item" data-view="agenda" data-label="Agenda"><i class='bx bx-time-five'></i></a>
+                    <a href="#" class="rail-item" data-view="trilha" data-label="Trilha"><i class='bx bx-book-content'></i></a>
+                    <a href="#" class="rail-item" data-view="comunicacao" data-label="Comunicacao"><i class='bx bx-chat'></i></a>
+                    <a href="#" class="rail-item" data-view="biblioteca" data-label="Biblioteca"><i class='bx bx-bookmark'></i></a>
+                    <a href="#" class="rail-item" data-view="mensagens" data-label="Mensagens"><i class='bx bx-envelope'></i></a>
+                    <a href="#" class="rail-item" data-view="relatorios" data-label="Relatorios"><i class='bx bx-download'></i></a>
+                </nav>
+                <nav class="rail-group" aria-label="Configuracoes">
+                    <a href="#" class="rail-item" data-view="automacoes" data-label="Automacoes"><i class='bx bx-magic-wand'></i></a>
+                    <a href="#" class="rail-item" data-view="empresa" data-label="Empresa"><i class='bx bx-building-house'></i></a>
+                    <a href="#" class="rail-item" data-view="calendario" data-label="Calendario"><i class='bx bx-calendar'></i></a>
+                    <a href="#" class="rail-item" data-view="configuracoes" data-label="Configuracoes"><i class='bx bx-cog'></i></a>
+                </nav>
+            </aside>
+
+            <section class="main-panel">
+                <header class="tabs">
+                    <button class="tab active" data-context="dashboard">Dashboard</button>
+                    <button class="tab" data-context="figma">Figma</button>
+                    <button class="tab" data-context="spotify">Spotify</button>
+                    <button class="tab" data-context="youtube">YouTube</button>
+                </header>
+
+                <section class="info-panel">
+                    <p class="path" id="path-label">Painel &nbsp;&gt;&nbsp; <strong>Organizacao</strong></p>
+                    <div id="main-content" class="content-body"></div>
+                </section>
+            </section>
+
+            <section class="assistant-panel">
+                <div class="assistant-head">
+                    <span>Assistente de estagio</span>
+                    <button>Plano Pro</button>
+                </div>
+                <div class="chat-thread" id="chat-messages">
+                    <article class="chat-msg bot">
+                        <p>Oi. Eu te ajudo a organizar tarefas, priorizar entregas e preparar mentorias.</p>
+                        <time>agora</time>
+                    </article>
+                    <article class="chat-msg bot">
+                        <p>Comece com uma pergunta ou clique em uma sugestao abaixo.</p>
+                        <time>agora</time>
+                    </article>
+                </div>
+                <div class="chips" id="chat-chips">
+                    <button type="button">Organizar minha semana</button>
+                    <button type="button">Criar checklist diario</button>
+                    <button type="button">Preparar reuniao 1:1</button>
+                    <button type="button">Priorizar pendencias</button>
+                    <button type="button">Plano de foco</button>
+                </div>
+                <div class="assistant-actions">
+                    <button type="button" data-quick="Montar plano da semana com foco nas entregas e mentorias.">Montar plano da semana</button>
+                    <button type="button" data-quick="Me ajude a priorizar pendencias por impacto e prazo.">Priorizar pendencias</button>
+                    <button type="button" data-quick="Crie um roteiro objetivo para minha reuniao 1:1.">Roteiro para reuniao 1:1</button>
+                </div>
+                <form class="assistant-input" id="chat-form">
+                    <input id="chat-input" type="text" placeholder="Digite sua duvida ou objetivo...">
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </article>
+    </div>
+
+    <template id="view-painel-template">
+        <div class="title-row">
+            <div>
+                <h1>Bom dia, estagiario.</h1>
+                <p>Veja suas prioridades da semana, prazos e proximas mentorias em um unico lugar.</p>
+            </div>
+        </div>
+
+        <section class="metrics">
+            <article class="metric-card">
+                <div class="metric-head">
+                    <h3>Tarefas da semana</h3>
+                    <button type="button" class="link-like" data-action="Abrindo backlog da semana">Ver backlog</button>
+                </div>
+                <div class="metric-foot">
+                    <span>Concluidas</span>
+                    <strong>8/12</strong>
+                </div>
+                <div class="bar"><span class="yellow"></span></div>
+            </article>
+
+            <article class="metric-card">
+                <div class="metric-head">
+                    <h3>Mentorias</h3>
+                    <button type="button" class="link-like" data-action="Agenda de mentorias aberta">Ver agenda</button>
+                </div>
+                <div class="metric-foot">
+                    <span>Proxima sessao</span>
+                    <strong>Hoje 15:30</strong>
+                </div>
+                <div class="bar"><span class="purple"></span></div>
+            </article>
+
+            <article class="metric-card">
+                <div class="metric-head">
+                    <h3>Horas registradas</h3>
+                    <button type="button" class="link-like" data-action="Folha de horas aberta">Abrir folha</button>
+                </div>
+                <div class="metric-foot">
+                    <span>Meta mensal</span>
+                    <strong>64h / 80h</strong>
+                </div>
+                <div class="bar"><span class="mint"></span></div>
+            </article>
+        </section>
+
+        <section class="stats">
+            <article class="stat-box lavender clickable" data-action="Voce tem 5 pendencias ativas"><strong>5</strong><span>Pendencias</span></article>
+            <article class="stat-box peach clickable" data-action="3 entregas desta semana"><strong>3</strong><span>Entregas da semana</span></article>
+            <article class="stat-box sand clickable" data-action="Ultimos 7 feedbacks carregados"><strong>7</strong><span>Feedbacks recebidos</span></article>
+        </section>
+
+        <section class="lower">
+            <article class="calendar-card">
+                <h2>Calendario</h2>
+                <div class="weekdays">
+                    <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+                </div>
+                <div class="calendar-grid">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span class="mark">5</span><span>6</span><span>7</span>
+                    <span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span class="mark">14</span>
+                    <span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span>
+                    <span>22</span><span>23</span><span>24</span><span>25</span><span class="mark">26</span><span>27</span><span>28</span>
+                </div>
+            </article>
+
+            <article class="events-card">
+                <div class="event">
+                    <div>
+                        <h4>Checkpoint com mentor</h4>
+                        <p>14 Fevereiro</p>
+                    </div>
+                    <span class="pill">Reuniao interna</span>
+                </div>
+                <div class="mini-bar"><span class="bar-blue"></span></div>
+                <div class="event">
+                    <div>
+                        <h4>Entrega de relatorio</h4>
+                        <p>22 Fevereiro</p>
+                    </div>
+                    <span class="pill violet">Prazo oficial</span>
+                </div>
+                <div class="mini-bar"><span class="bar-violet"></span></div>
+            </article>
+        </section>
+    </template>
+
+    <div class="toast" id="app-toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+</html>

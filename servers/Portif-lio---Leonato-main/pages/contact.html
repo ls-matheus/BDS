@@ -1,0 +1,130 @@
+<link rel="stylesheet" href="assets/codes/css/page.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<style>
+    .baixo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50vw;          /* ocupa metade da largura da tela */
+        height: 100vh;        /* ocupa toda a altura da tela */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* cor de fundo opcional */
+    }
+
+    .boxx {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        position: absolute;
+        left: 35%;
+        top: 22%;
+    }
+
+    .cc {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 2px solid #333;
+        transition: all 0.3s ease;
+    }
+
+    .cc:hover {
+        transform: scale(1.1);
+        background-color: #333;
+        border-color: #fff;
+    }
+
+    .cc:hover i {
+        color: #fff;
+    }
+
+    .cc a {
+        text-decoration: none;
+        color: #333;
+        font-size: 30px;
+        transition: color 0.3s ease;
+    }
+
+    .cc i {
+        transition: transform 0.3s ease;
+    }
+
+    .cc:hover i {
+        transform: scale(1.2);
+    }
+
+    /* Cores específicas */
+    .cc.whatsapp {
+        background-color: #25D366;
+        border-color: #25D366;
+    }
+
+    .cc.instagram {
+        background-color: #E4405F;
+        border-color: #E4405F;
+    }
+
+    .cc.linkedin {
+        background-color: #0077B5;
+        border-color: #0077B5;
+    }
+
+    .cc.github {
+        background-color: #333;
+        border-color: #333;
+    }
+
+    #git {
+        color: #fff;
+    }
+
+    #git:hover {
+        color: rgb(255, 255, 255);
+    }
+
+</style>
+
+<div class="conteudo">
+    <h1 class="pp">Contatos</h1>
+
+    <div class="baixo">
+        <div class="boxx">
+            <!-- WhatsApp -->
+            <div class="cc whatsapp">
+                <a href="https://wa.me/5511989451201" target="_blank" class="ll">
+                    <i class='bx bxl-whatsapp'></i>
+                </a>
+            </div>
+
+            <!-- Instagram -->
+            <div class="cc instagram">
+                <a href="https://instagram.com/leonato_sl?igsh=ZWM2YTNwczE4MzVj" target="_blank" class="ll">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="cc linkedin">
+                <a href="https://linkedin.com/in/matheus-leonato" target="_blank" class="ll">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+            </div>
+
+            <!-- GitHub -->
+            <div class="cc github">
+                <a href="https://github.com/ls-matheus" target="_blank" class="ll">
+                    <i class='bx bxl-github' id="git"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+

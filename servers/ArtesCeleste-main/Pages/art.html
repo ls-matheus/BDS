@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galeria de Artes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+    
+      background: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      margin-top: 60px;
+     
+
+      padding: 20px; 
+      padding-bottom: 60px;
+      overflow-x: hidden;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid #bbb;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      width: 240px;
+      min-height: 300px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 25px;
+    }
+    .card img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 5px;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+    <center><h1 class="titulo">Galeria</h1></center>
+  <div class="card-container">
+    <!-- exemplo repetido pra 20 obras -->
+    <!-- você pode trocar as imagens e textos -->
+    <!-- repetindo pra agilizar -->
+    <!-- 1 -->
+    <div class="card" onclick="expandCard(this)">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Mona_Lisa.jpg" alt="Mona Lisa">
+      <h2>Mona Lisa</h3>
+      <h5>Leonardo da Vinci</h4>
+      <p>Obra icônica do Renascimento que fascina o mundo com técnica e mistério.</p>
+    </div>
+    <!-- repete mais 19 vezes -->
+    <!-- copia-cola mudando texto/autor se quiser -->
+    <!-- 2 -->
+    <div class="card" onclick="expandCard(this)">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/330px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" alt="Noite Estrelada">
+      <h2>Noite Estrelada</h3>
+      <h5>Vincent van Gogh</h4>
+      <p>Visão poética da natureza, famosa pelas pinceladas vivas e emocionantes.</p>
+    </div>
+    <!-- 3 -->
+    <div class="card" onclick="expandCard(this)">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg/250px-Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg" alt="O Grito">
+      <h2>O Grito</h3>
+      <h5>Edvard Munch</h4>
+      <p>Expressão máxima do desespero humano, cores vibrantes e traço forte.</p>
+    </div>
+    <!-- ... (repete até 20 cards, troca imagem/autor/nome se quiser) -->
+     <!-- 4 -->
+<div class="card" onclick="expandCard(this)">
+    <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/5/59/A_Persist%C3%AAncia_da_Mem%C3%B3ria.jpg/330px-A_Persist%C3%AAncia_da_Mem%C3%B3ria.jpg" alt="A Persistência da Memória">
+    <h2>A Persistência da Memória</h2>
+    <h5>Salvador Dalí</h5>
+    <p>Relógios derretidos que simbolizam a fluidez do tempo no surrealismo de Dalí.</p>
+  </div>
+  
+  <!-- 5 -->
+  <div class="card" onclick="expandCard(this)">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Great_Wave_off_Kanagawa2.jpg/330px-Great_Wave_off_Kanagawa2.jpg" alt="A Grande Onda de Kanagawa">
+    <h2>A Grande Onda de Kanagawa</h2>
+    <h5>Hokusai</h5>
+    <p>Ícone da arte japonesa ukiyo-e, retratando a força do mar contra o Monte Fuji.</p>
+  </div>
+  
+  <!-- 6 -->
+  <div class="card" onclick="expandCard(this)">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg/250px-Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg" alt="Moça com Brinco de Pérola">
+    <h2>Moça com Brinco de Pérola</h2>
+    <h5>Johannes Vermeer</h5>
+    <p>Retrato misterioso e delicado, considerado a Mona Lisa do norte da Europa.</p>
+  </div>
+  
+  <!-- 7 -->
+  <div class="card" onclick="expandCard(this)">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg/500px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg" alt="O Nascimento de Vênus">
+    <h2>O Nascimento de Vênus</h2>
+    <h5>Sandro Botticelli</h5>
+    <p>Vênus surgindo do mar, expressão clássica de beleza na pintura renascentista.</p>
+  </div>
+  
+  <!-- 8 -->
+  <div class="card" onclick="expandCard(this)">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/God2-Sistine_Chapel.png/330px-God2-Sistine_Chapel.png" alt="A Criação de Adão">
+    <h2>A Criação de Adão</h2>
+    <h5>Michelangelo</h5>
+    <p>Detalhe do teto da Capela Sistina, com a famosa mão de Deus dando vida a Adão.</p>
+  </div>
+
+  </div>

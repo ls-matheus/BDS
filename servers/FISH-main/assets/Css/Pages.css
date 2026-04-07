@@ -1,0 +1,185 @@
+html, body {
+  overflow: auto;
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* IE e Edge */
+}
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none;                 /* Chrome, Safari e Opera */
+}
+
+  .corp {
+    background: #ffffffcc; /* branco com leve transparência */
+    border-radius: 20px;
+    padding: 25px 30px;
+    max-width: 700px;
+    margin: 60px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Baloo 2', cursive;
+    line-height: 1.6;
+  }
+
+  .fundoPCC {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .test {
+    margin-top: 150px;
+  }
+
+  .drop {
+    margin-top: 55px;
+  }
+  
+  .fundope {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .shop {
+    margin-top: 0px;
+  }
+
+  .cabelo {
+    margin-top: 10px;
+  }
+
+  .make {
+    margin-top: 0px;
+  }
+
+  .home {
+    margin-top: 0px;
+  }
+
+  .tit, .t {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+  }
+
+  .tit {
+    background: linear-gradient(100deg, #5396c5 0%, #aebaf1 40%, #1936b4 60%, #6580f8 80%, #6384f1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1.5px;
+    font-family: 'Baloo 2', cursive;
+  }
+  
+  .t p {
+    text-align: justify;
+    font-size: 17px;
+    color: #333;
+    font-family: 'Baloo 2', cursive;
+  }
+  
+  .tit h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 0px;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+  
+  .drop {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+  }
+  
+  .fundo {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* Mostrar fundo selecionado */
+  #bg1:checked ~ .drop img:nth-child(1),
+  #bg2:checked ~ .drop img:nth-child(2),
+  #bg3:checked ~ .drop img:nth-child(3),
+  #bg4:checked ~ .drop img:nth-child(4),
+  #bg5:checked ~ .drop img:nth-child(5) {
+    opacity: 1;
+    z-index: 0;
+  }
+  
+  .btns {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transform: translateY(-50%);
+    z-index: 1000;
+  }
+  
+  .btns label {
+    width: 44px;
+    height: 44px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .btns label:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .btns label svg path {
+    stroke: black;
+    stroke-width: 2;
+    fill: none;
+  }
+  
+  .btns {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transform: translateY(-50%);
+    z-index: 1000;
+  }
+  
+  .btns label {
+    width: 44px;
+    height: 44px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .btns label:hover {
+    background-color: #f0f0f0;
+  }
+  

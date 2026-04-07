@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cubo 3D</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    perspective: 800px; 
+  }
+
+  .cubo {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: girar 5s linear infinite; /* animação contínua */
+  }
+
+  .face {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255,165,0,0.8);
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .front  { transform: rotateY(0deg) translateZ(75px); }
+  .back   { transform: rotateY(180deg) translateZ(75px); }
+  .right  { transform: rotateY(90deg) translateZ(75px); }
+  .left   { transform: rotateY(-90deg) translateZ(75px); }
+  .top    { transform: rotateX(90deg) translateZ(75px); }
+  .bottom { transform: rotateX(-90deg) translateZ(75px); }
+
+  @keyframes girar {
+    0%   { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+  }
+</style>
+</head>
+<body>
+
+<div class="cubo">
+  <div class="face front">F</div>
+  <div class="face back">B</div>
+  <div class="face right">R</div>
+  <div class="face left">L</div>
+  <div class="face top">T</div>
+  <div class="face bottom">D</div>
+</div>
+
+</body>
+</html>

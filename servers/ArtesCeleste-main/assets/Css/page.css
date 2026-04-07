@@ -1,0 +1,134 @@
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* impede rolagem lateral */
+    overflow-y: auto;   /* libera rolagem vertical */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  .fundo {
+    position: relative;   
+    top: 80px;         
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 58px);
+    object-fit: cover;
+    z-index: -2;
+  }
+  
+  .fundo2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .fundo3 {
+    position: relative;            
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 58px);
+    object-fit: cover;
+    z-index: -2;
+  }
+  
+  .conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .titulo { 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    background: linear-gradient(90deg, rgb(206, 155, 248), rgb(168, 150, 247), rgb(233, 146, 175), rgb(240, 153, 153), rgb(156, 241, 202), rgb(199, 144, 238), violet);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .titulo2 { 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    background: linear-gradient(90deg, rgb(233, 146, 175));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .titulo3 { 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    background: linear-gradient(90deg, rgb(156, 241, 202));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .titulo4 { 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    background: linear-gradient(90deg, rgb(199, 144, 238));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .container {
+    margin-left: 50px;
+    margin-top: 170px;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid rgb(238, 236, 236);
+    background: rgba(255, 255, 255, 0.2); /* cor semi-transparente */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* compatibilidade safari */
+    border-radius: 8px;
+  }
+
+
+.container p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333; /* cinza escuro em vez de preto puro */
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: justify;
+  border: 1px solid rgb(233, 231, 231);
+  background: rgba(255, 255, 255, 0.2); /* cor semi-transparente */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* compatibilidade safari */
+  border-radius: 8px;
+}
+
+.conteudo2 {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 1;
+}

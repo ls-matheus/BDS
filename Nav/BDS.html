@@ -1,0 +1,36 @@
+<section class="page page-bds">
+    <div class="bds-layout">
+        <aside class="bds-side-nav" aria-label="Niveis">
+            <button class="bds-side-btn is-active" type="button" data-bds-course="1ds">1DS</button>
+            <button class="bds-side-btn" type="button" data-bds-course="2ds">2DS</button>
+            <button class="bds-side-btn" type="button" data-bds-course="3ds">3DS</button>
+        </aside>
+
+        <div class="docs-browser-frame" role="region" aria-label="Area de documentacao" data-bds-browser>
+            <div class="docs-browser-topbar">
+                <div class="docs-browser-dots" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="docs-browser-address">biblioteca.local/docs/1ds</div>
+            </div>
+            <div class="docs-browser-body">
+                <button
+                    class="docs-mobile-menu-toggle"
+                    type="button"
+                    data-docs-menu-toggle
+                    aria-expanded="false"
+                    aria-controls="docs-inner-nav"
+                >
+                    <span data-docs-menu-label>Secoes</span>
+                    <i class='bx bx-chevron-down' aria-hidden="true"></i>
+                </button>
+
+                <aside id="docs-inner-nav" class="docs-inner-nav" aria-label="Navegacao interna da documentacao" data-docs-section-nav></aside>
+
+                <div class="docs-browser-canvas" data-docs-course-host aria-live="polite"></div>
+            </div>
+        </div>
+    </div>
+</section>

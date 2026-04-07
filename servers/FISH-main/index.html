@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/Css/NavBar.css" />
+  <link rel="stylesheet" href="assets/Css/Pages.css" />
+
+  <title>Site Portal</title>
+
+  <style>
+.fish {
+  position: fixed; /* mantém fixed */
+  width: 60px;
+  height: 30px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+    .body {
+      position: absolute;
+      width: 30px;
+      height: 16px;
+      background: none;
+      border: 2px solid #1a3c6d;
+      border-radius: 50%;
+      left: 18px;
+      top: 7px;
+    }
+
+    .tail {
+      position: absolute;
+      left: 0px;
+      top: 8px;
+      width: 1px;
+      height: 1px;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-right: 15px solid #355581;
+      transform: rotate(170deg);
+      border-radius: 500px;
+    }
+
+    .eye {
+      position: absolute;
+      top: 12px;
+      left: 38px;
+      width: 4px;
+      height: 4px;
+      background: #1a3c6d;
+      border-radius: 50%;
+    }
+
+    @keyframes wag {
+      0% {
+        transform: rotate(190deg);
+      }
+      100% {
+        transform: rotate(170deg);
+      }
+    }
+  </style>
+</head>
+<body class="corpo">
+
+  <!-- Navbar no TOPO OMG -->
+  <div class="navbar-top">
+    <div class="navitems-top">
+      <ul class="lista">
+        <li class="item ativo" data-pagina="home" onclick="selecionar(this)">
+          <a href="javascript:void(0)" class="icon"><i class="bx bx-home-alt"></i></a>
+          <a href="javascript:void(0)" class="link">Home</a>
+        </li>
+        <li class="item" data-pagina="cabelo" onclick="selecionar(this)">
+          <a href="javascript:void(0)" class="icon"><i class='bx bx-water'></i></a>
+          <a href="javascript:void(0)" class="link">Water</a>
+        </li>
+        <li class="item" data-pagina="make" onclick="selecionar(this)">
+          <a href="javascript:void(0)" class="icon"><i class='bx bx-question-mark' ></i></a>
+          <a href="javascript:void(0)" class="link">How</a>
+        </li>
+        <li class="item" data-pagina="shop" onclick="selecionar(this)">
+          <a href="javascript:void(0)" class="icon"><i class='bx bx-plus' ></i></a>
+          <a href="javascript:void(0)" class="link">More</a>
+        </li>
+      </ul>
+      <div class="fixo-destaque">
+        <a href="lion.html" class="icon"><i class='bx bx-leaf'></i></a>
+        <a href="lion.html" class="link">Lion!</a>
+      </div>
+      <div class="fixo-perfil">
+        <a href="javascript:void(0)" class="icon-profile" data-pagina="perfil" onclick="selecionar(this)">
+          <i class='bx bx-code-alt'></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Conteudo -->
+  <div class="conteudo">
+    <!-- Conteúdo vai ser carregado aqui -->
+  </div>
+
+  <div class="fish">
+    <div class="tail"></div>
+    <div class="body"></div>
+    <div class="eye"></div>
+  </div>
+
+  <script>
+    const fish = document.querySelector('.fish');
+    const corpo = document.querySelector('.corpo');
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let currentX = mouseX;
+    let currentY = mouseY;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animateFish() {
+      const offset = 60; // distância do peixe do mouse
+      const dx = mouseX - currentX;
+      const dy = mouseY - currentY;
+      const angle = Math.atan2(dy, dx);
+      const targetX = mouseX - Math.cos(angle) * offset;
+      const targetY = mouseY - Math.sin(angle) * offset;
+
+      // limita dentro dos limites da div corpo
+      const rect = corpo.getBoundingClientRect();
+
+      let limitedX = targetX;
+      let limitedY = targetY;
+
+      if (limitedX < rect.left) limitedX = rect.left + 10;
+      if (limitedX > rect.right) limitedX = rect.right - 10;
+
+      if (limitedY < rect.top) limitedY = rect.top + 10;
+      if (limitedY > rect.bottom) limitedY = rect.bottom - 10;
+
+      currentX += (limitedX - currentX) * 0.1;
+      currentY += (limitedY - currentY) * 0.1;
+
+      fish.style.left = currentX + 'px';
+      fish.style.top = currentY + 'px';
+      fish.style.transform = `translate(-50%, -50%) rotate(${angle * 180 / Math.PI}deg)`;
+
+      requestAnimationFrame(animateFish);
+    }
+
+    animateFish();
+  </script>
+
+  <script src="assets/Js/script.js"></script>
+  <script src="assets/Js/btn.js"></script>
+  <script src="assets/Js/vibrate.js"></script>
+
+</body>
+</html>

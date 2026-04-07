@@ -1,0 +1,13 @@
+html,body {
+    margin: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+@media (min-width: 750px) {
+    .mobile {
+        display: none;
+    }
+}

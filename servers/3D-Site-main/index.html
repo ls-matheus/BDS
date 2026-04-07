@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cubo 3D VR Simples</title>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<style>
+  body, html {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    overflow: hidden;
+  }
+  model-viewer {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  @media (max-width: 768px) {
+    model-viewer {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+</style>
+</head>
+<body>
+
+<model-viewer
+  src="cubob.glb"
+  alt="Cubo 3D"
+  camera-controls
+  device-orientation
+  auto-rotate
+  shadow-intensity="1"
+  environment-image="neutral"
+  camera-orbit="0deg 75deg 10m"
+  min-camera-orbit="auto auto 5m"
+  max-camera-orbit="auto auto 20m">
+</model-viewer>
+
+</body>
+</html>

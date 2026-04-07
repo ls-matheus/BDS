@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/Css/NavBar.css" />
+  <link rel="stylesheet" href="assets/Css/Pages.css" />
+
+  <title>Site Portal</title>
+</head>
+<body class="corpo">
+
+  <!-- Navbar no TOPO OMG -->
+  <div class="navbar-top">
+    <div class="navitems-top">
+      <ul class="lista">
+        <li class="item ativo" data-pagina="home" onclick="selecionar(this)">
+          <a href="javascript:void(0)" class="icon"><i class="bx bx-home-alt"></i></a>
+          <a href="javascript:void(0)" class="link">Home</a>
+        </li>
+        <li class="item" data-pagina="cabelo" onclick="selecionar(this)">
+          <a href="javascript:void(0)" class="icon"><i class="bx bx-donate-heart"></i></a>
+          <a href="javascript:void(0)" class="link">Cabelo</a>
+        </li>
+        <li class="item" data-pagina="make" onclick="selecionar(this)">
+          <a href="javascript:void(0)" class="icon"><i class="bx bx-spa"></i></a>
+          <a href="javascript:void(0)" class="link">Unhas</a>
+        </li>
+        <li class="item" data-pagina="shop" onclick="selecionar(this)">
+          <a href="javascript:void(0)" class="icon"><i class='bx bx-bulb'></i></a>
+          <a href="javascript:void(0)" class="link">Luzes</a>
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+
+  <!-- Navbar em BAIXO -->
+  <div class="navbar">
+    <div class="navitems">
+      <ul class="lista">
+        <li class="item ativo" data-pagina="home" onclick="selecionar(this)">
+          <a href="javascript:void(0)" class="icon"><i class="bx bx-home-alt"></i></a>
+          <a href="javascript:void(0)" class="link">Home</a>
+        </li>
+        <li class="item" data-pagina="cabelo" onclick="selecionar(this)">
+          <a href="javascript:void(0)" class="icon"><i class="bx bx-donate-heart"></i></a>
+          <a href="javascript:void(0)" class="link">Cabelo</a>
+        </li>
+        <li class="item" data-pagina="make" onclick="selecionar(this)">
+          <a href="javascript:void(0)" class="icon"><i class="bx bx-spa"></i></a>
+          <a href="javascript:void(0)" class="link">Unhas</a>
+        </li>
+        <li class="item" data-pagina="shop" onclick="selecionar(this)">
+          <a href="javascript:void(0)" class="icon"><i class='bx bx-bulb'></i></a>
+          <a href="javascript:void(0)" class="link">Luzes</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Dentro da .navbar-top, bem ao final da navitems-top -->
+<div class="nnnav"> 
+<div class="contact-button-container">
+  <button class="toggle-button" onclick="toggleContacts()">
+    <i class='bx bx-user-circle'></i>
+  </button>
+
+  <div class="contact-options" id="contactOptions">
+    <a href="https://wa.me/+5511989451201" target="_blank" class="icon whatsapp">
+      <i class='bx bxl-whatsapp'></i> 
+    </a>
+    <a href="https://instagram.com/leonato_sl?igsh=ZWM2YTNwczE4MzVj" target="_blank" class="icon insta">
+      <i class='bx bxl-instagram'></i>
+    </a>
+    <a href="#" target="_blank" class="icon face">
+      <i class='bx bxl-facebook'></i>
+    </a>
+  </div>
+</div>
+</div>
+
+  
+  
+  
+  
+
+  <!-- Conteudo -->
+  <div class="conteudo">
+    <!-- Conteúdo vai ser carregado aqui -->
+  </div>
+
+  <script src="assets/Js/script.js"></script>
+  <script src="assets/Js/btn.js"></script>
+  <script src="assets/Js/vibrate.js"></script>
+
+</body>
+</html>

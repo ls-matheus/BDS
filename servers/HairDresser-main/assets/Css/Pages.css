@@ -1,0 +1,431 @@
+@media (min-width: 769px) {
+  .corpo {
+    margin: 0;
+  }
+
+  .shop {
+    margin-top: 90px;
+  }
+
+  .cabelo {
+    margin-top: 90px;
+  }
+
+  .make {
+    margin-top: 90px;
+  }
+
+  .home {
+    margin-top: 0;
+  }
+  
+  .fundoPC {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .rodapepc {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+@media (max-width: 769px) {
+  .corpo {
+    margin: 0;
+  }
+
+  .shop {
+    margin-top: 0px;
+  }
+
+  .cabelo {
+    margin-top: 0px;
+  }
+
+  .make {
+    margin-top: 0px;
+  }
+
+  .home {
+    margin-top: 0px;
+  }
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.svg2 {
+  display: none;
+}
+
+  .rodapecll {
+    display: none;
+  }
+
+
+  .fundoCell {
+    display: none;
+  }
+
+  .img-botao-container{
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .fundoPC {
+    display: none;
+  }
+
+  .img-botao-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .bt {
+    position: absolute;
+    top: 52%; /* ajusta aqui pra alinhar com a linha da imagem no CELULAR */
+    left: 34%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    z-index: 10;
+
+  }
+
+  .btmM {
+    background-color: rgb(255, 255, 255);
+    border: rgb(230, 183, 123) solid 1px;
+    border-radius: 50px;
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 15px;
+  }
+
+  .btmM:hover {
+    background-color: rgb(151, 106, 0);
+    border: rgb(255, 230, 198) solid 4px;
+    border-radius: 50px;
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    align-content: center;
+    color: white;
+  }
+
+  .btmW {
+    background-color: rgb(255, 255, 255);
+    border: rgb(0, 128, 0) solid 1px;
+    border-radius: 50px;
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    align-content: center;
+  }
+
+  .btmW:hover {
+    background-color: #029816;
+    border: rgb(208, 251, 208) solid 4px;
+    border-radius: 50px;
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    align-content: center;
+  }
+
+  .llinkM {
+    text-decoration: none;
+    color: rgb(180, 117, 23);
+  }
+
+  .llinkM:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+
+  .llinkW {
+    text-decoration: none;
+    color: rgb(0, 128, 0);
+  }
+
+  .llinkW:hover {
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+    
+  }
+
+  .rodapepc {
+    display: none;
+  }
+
+  .home {
+    margin-top: 0px;
+  }
+
+  .fundoCell {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  
+
+  .rodapecll {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .svg {
+    display: none;
+  }
+
+  .svg2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+body {
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Edge, etc */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap');
+
+
+.txt {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4b4a4a;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  text-align: justify;
+}
+
+.titulo {
+  font-family: "Playwrite HU", cursive;
+  font-weight: 400;
+  font-size: 36px;
+  color: #864a00;
+  text-align: center;
+  margin: 25px 25px 50px; /* cima, lados, baixo */
+}
+
+.tituloU {
+  font-family: "Playwrite HU", cursive;
+  font-weight: 400;
+  font-size: 36px;
+  color: #864a00;
+  text-align: center;
+  margin: 0px 25px 50px; /* cima, lados, baixo */
+}
+
+/* Estilos gerais da lista */
+.lista-destaques {
+  list-style: none;
+  max-width: 800px;
+  margin: 40px auto 80px;
+  padding: 0 50px;
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .lista-destaques li {
+    background: #ffffff;
+    border-left: 6px solid #d6b182 ;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    padding: 25px 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    border-radius: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .lista-destaques li:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+
+  .lista-destaques i {
+    font-size: 32px;
+    color: #864a00;
+    flex-shrink: 0;
+    margin-top: 13px;
+  }
+
+  .lista-destaques strong {
+    font-weight: 600;
+    color: #B27021;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .br {
+    display: none;
+  }
+  
+  .lista-destaques li {
+    background: #ffffff;
+    border-left: none;
+    border: #d6b182 solid 1px;
+    margin-bottom: 25px;
+    padding: 20px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px; /* maior texto para facilitar leitura no celular */
+    line-height: 1.6;
+    color: #686868;
+    display: flex;
+    flex-direction: column; /* ícone em cima, texto embaixo */
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .lista-destaques li:hover {
+    transform: none; /* sem zoom no mobile */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .lista-destaques i {
+    font-size: 28px;
+    color: #864a00;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  .lista-destaques strong {
+    font-weight: 600;
+    color: #B27021;
+  }
+}
+
+.cabelo-page {
+  padding: 40px 30px;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+.descricao {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.lista-servicos {
+  list-style: none;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  padding-left: 0;
+}
+
+.lista-servicos li {
+  background: #fffaf1;
+  border-left: 4px solid #fa54ac;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.fotos-comparacao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.fotos-comparacao img {
+  width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Mobile ajustes */
+@media (max-width: 768px) {
+  .fotos-comparacao img {
+    width: 45%;
+  }
+
+  .descricao, .lista-servicos li {
+    font-size: 20px;
+  }
+}
+
+.mechas {
+  padding-top: 47px;
+}
+
+html, body {
+  overflow: auto !important;
+}
+
+.text {
+  margin-top: 13px;
+}
+
+.w {
+  text-decoration: none;
+  color: #009402;
+}
+
+.w:hover {
+  color: white;
+}
+

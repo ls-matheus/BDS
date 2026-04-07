@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <base href="https://cdn.jsdelivr.net/gh/genizy/fridayfunk/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="FNF.css">
+    <script src="Funkin.js"></script>
+    <title>FNF View</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        #openfl-content {
+            width: 100%;
+            height: 100%;
+            background: black;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+            image-rendering: pixelated;
+        }
+    </style>
+</head>
+<body>
+    <div id="openfl-content"></div>
+
+    <script>
+        lime.embed("Funkin", "openfl-content", 640, 360, { parameters: {} });
+    </script>
+</body>
+</html>

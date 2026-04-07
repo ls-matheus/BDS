@@ -1,0 +1,96 @@
+.body {
+    margin: 0;
+}
+
+.lista {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(121, 145, 173);
+}
+
+i {
+    margin-right: 10px;
+    font-size: 30px;
+    border-bottom: 1px solid transparent;
+    transition: transform 0.3s, border-color 0.3s;
+    padding-bottom: 5px;
+    color: rgb(160, 160, 160);
+}
+
+i.bx.bx-brick:hover {
+    transform: scale(1.1);
+    color:rgb(206, 155, 248);
+    border-bottom-color:rgb(206, 155, 248);
+}
+
+i.bx.bx-translate:hover {
+    transform: scale(1.1);
+    color:rgb(233, 146, 175);
+    border-bottom-color:rgb(233, 146, 175);
+}
+
+i.bx.bx-avocado:hover {
+    transform: scale(1.1);
+    color:rgb(156, 241, 202);
+    border-bottom-color:rgb(156, 241, 202);
+}
+
+i.bx.bx-palette:hover {
+    transform: scale(1.1);
+    color:rgb(199, 144, 238);
+    border-bottom-color:rgb(199, 144, 238);
+}
+
+
+.item {
+    margin-top: 7px;
+    margin-left: 27px;
+    margin-right: 27px;
+    margin-bottom: 7px;
+}
+
+.itemv {
+        margin-top: 7px;
+        margin-left: 27px;
+        margin-right: 27px;
+        margin-bottom: 7px;
+    }
+
+    i.bx.bx-bookmark-heart{
+        margin-right: 10px;
+        font-size: 30px;
+        border-bottom: 1px solid transparent;
+        transition: transform 0.3s, border-color 0.3s;
+        padding-bottom: 5px;
+        color: rgb(0, 0, 0);
+    }
+
+    i.bx.bx-bookmark-heart:hover {
+        transform: scale(1.1);
+        color:rgb(160, 160, 160);
+        border-bottom-color:rgb(177, 177, 177);
+    }
+
+
+.nav {
+    border-bottom: rgb(248, 248, 248) solid 2px;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.2); /* cor semi-transparente */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* compatibilidade safari */
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+}
+
+.top {
+    overflow: hidden;
+}

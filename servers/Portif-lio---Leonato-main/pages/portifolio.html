@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quadradinhos</title>
+
+<link rel="stylesheet" href="assets/codes/css/page.css">
+
+<style>
+  .conte {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+  }
+
+  .cards {
+    width: 80%;
+    height: 60%;
+    position: absolute;
+    left: 5%;
+    top: 25%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px; /* 🔹 diminui o espaço entre os cards */
+    justify-items: center;
+    align-items: start; /* 🔹 empurra as linhas para cima */
+    padding: 10px 0; /* 🔹 leve ajuste para centralizar visualmente */
+  }
+
+  .card {
+    position: relative;
+    width: 95%;
+    height: 70%; /* 🔹 tamanho original mantido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 25px;
+    border: 3px solid white;
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+
+.card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 35%;
+  background: linear-gradient(to top, rgba(0.5, 0.5, 0.5, 0.5), rgba(0, 0, 0, 0));
+  border-radius: 0 0 25px 25px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* ← adiciona isso */
+}
+
+
+  .card:hover::after {
+    opacity: 1;
+  }
+
+  .card:hover img {
+    transform: scale(1.05);
+  }
+
+  .titulo {
+    position: absolute;
+    top: 66%;
+    left: 10px;
+    right: 0;
+    text-align: center;
+    color: white;
+    font-size: 90%;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+  }
+
+  .card:hover .titulo {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+@media (max-width: 1100px){
+  .card {
+    width: 90%;
+    height: 55%;
+  }
+}
+</style>
+</head>
+
+<body>
+  <h1 class="pp">Portifólio</h1>
+  <div class="conte">
+    <div class="cards">
+  <div class="card">
+    <a href="https://ls-matheus.github.io/ArtesCeleste/" target="_blank" style="display: block; width: 100%; height: 100%;">
+      <img src="assets/Imgs/fotos/artes.png" id="a">
+      <div class="titulo">Artes</div>
+    </a>
+  </div>
+  <div class="card">
+    <a href="https://ls-matheus.github.io/FISH/" target="_blank" style="display: block; width: 100%; height: 100%;">
+      <img src="assets/Imgs/fotos/fish.png" id="b">
+      <div class="titulo">Fish</div>
+    </a>
+  </div>
+  <div class="card">
+    <a href="https://ls-matheus.github.io/HairDresser/" target="_blank" style="display: block; width: 100%; height: 100%;">
+      <img src="assets/Imgs/fotos/cabelo.png" id="c">
+      <div class="titulo">Cabelo</div>
+    </a>
+  </div>
+  <div class="card">
+    <a href="https://ls-matheus.github.io/Form/" target="_blank" style="display: block; width: 100%; height: 100%;">
+      <img src="assets/Imgs/fotos/form.png" id="d">
+      <div class="titulo">Formulário</div>
+    </a>
+  </div>
+</div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<nav class="barra">
+            <img src="assets/linhas test.png" alt="">
+            <div class="organização">
+                <a href="#"><i class='bx bxs-home-alt-2' ></i>Home</a>
+                <a href="#"><i class='bx bxs-book-alt'></i>BDS</a>
+                <button><img src="assets/sem fundo.png" class="logo/central"></button>
+                <a href="#"><i class='bx bx-code-alt' ></i>Programação</a>
+                <a href="#"><i class='bx bxs-palette' ></i>Outros</a>
+            </div>
+        </nav>
