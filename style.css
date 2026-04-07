@@ -1367,6 +1367,8 @@ body[data-route="bds"] .page-bds {
         width: calc(100vw - 18px);
         padding: 6px 8px;
         border-radius: 16px;
+        background: #ffffff;
+        box-shadow: none;
     }
 
     body[data-route="home"] .barra > div {
@@ -1407,6 +1409,8 @@ body[data-route="bds"] .page-bds {
         width: min(100%, 560px);
         border-radius: 20px;
         padding: 8px 10px;
+        background: #ffffff;
+        box-shadow: none;
     }
 
     .barra > div {
@@ -1560,6 +1564,8 @@ body[data-route="bds"] .page-bds {
         width: min(100%, 640px);
         border-radius: 18px;
         padding: 8px 10px;
+        background: #ffffff;
+        box-shadow: none;
     }
 
     body[data-view="dev"] .barra > div,
@@ -1612,6 +1618,8 @@ body[data-route="bds"] .page-bds {
         width: min(100%, 640px);
         border-radius: 18px;
         padding: 8px 10px;
+        background: #ffffff;
+        box-shadow: none;
     }
 
     body[data-view="home"] .barra > div {
@@ -1911,4 +1919,21 @@ body[data-route="bds"] .page-bds {
     }
 }
 
-a
+/* Telas muito pequenas - smartphones antigos */
+@media (max-width: 400px) {
+    body[data-view="dev"] .project-card-image,
+    body[data-view="style"] .project-card-image {
+        max-height: clamp(280px, 45vh, 380px);
+        min-height: 250px;
+    }
+
+    body[data-view="dev"] .mini-carousel-pages,
+    body[data-view="style"] .mini-carousel-pages {
+        height: clamp(180px, 40vh, 320px);
+    }
+
+    body[data-view="dev"] .mini-carousel,
+    body[data-view="style"] .mini-carousel {
+        min-height: clamp(220px, 45vh, 360px);
+    }
+}
