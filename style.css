@@ -1680,12 +1680,15 @@ body[data-route="bds"] .page-bds {
         max-width: 100%;
         margin-top: 0;
         border-radius: 20px;
+        height: auto;
     }
 
     body[data-view="dev"] .project-card-image,
     body[data-view="style"] .project-card-image {
-        max-height: clamp(120px, 18vh, 280px);
-        min-height: 80px;
+        width: 100%;
+        height: auto;
+        max-height: clamp(220px, 28vh, 280px);
+        min-height: 170px;
         object-fit: cover;
     }
 
@@ -1788,7 +1791,7 @@ body[data-route="bds"] .page-bds {
 
     body[data-view="bds"] .bds-layout {
         grid-template-columns: 1fr;
-        grid-template-rows: auto minmax(0, 1fr);
+        grid-template-rows: auto minmax(, 1fr);
         gap: 10px;
         min-height: calc(100dvh - 112px - env(safe-area-inset-bottom));
         height: auto;
@@ -1895,8 +1898,8 @@ body[data-route="bds"] .page-bds {
 
     body[data-view="dev"] .project-card-image,
     body[data-view="style"] .project-card-image {
-        max-height: clamp(100px, 15vh, 260px);
-        min-height: 70px;
+        max-height: clamp(200px, 35vh, 320px);
+        min-height: 180px;
     }
 
     body[data-route="home"] .home-mega-content {
